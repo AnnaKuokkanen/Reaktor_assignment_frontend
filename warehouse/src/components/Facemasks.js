@@ -2,7 +2,7 @@ import React from 'react';
 
 const Facemasks = ({ facemasks }) => {
   return (
-    <div>
+    <div class="container">
       <h1>Facemasks</h1>
     </div>
   )

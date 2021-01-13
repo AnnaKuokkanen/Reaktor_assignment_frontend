@@ -1,57 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Beanies from './components/Beanies';
 import Gloves from './components/Gloves';
 import Facemasks from './components/Facemasks';
+import Home from './components/Home';
+import {
+  BrowserRouter as Router,
+  Switch, Route, Link
+} from "react-router-dom";
+
 
 const App = () => {
 
   const [beanies, setBeanies] = useState([]);
   const [gloves, setGloves] = useState([]);
   const [facemasks, setFacemasks] = useState([]);
-  const [category, setCategory] = useState('');
 
-  useEffect(() => {
-    setCategory('');
-  }, [])
-
-  const handleCategory = (category) => {
-    console.log('Category is ', category);
-    setCategory(category);
-  }
-
-  if (category === 'beanies') {
-    return (
-      <div>
-        <Beanies beanies={beanies}/>
-      </div>
-    )
-  }
-
-  if (category === 'gloves') {
-    return (
-      <div>
-        <Gloves gloves={gloves}/>
-      </div>
-    )
-  }
-
-  if (category === 'facemasks') {
-    return (
-      <div>
-        <Facemasks facemasks={facemasks}/>
-      </div>
-    )
+  const padding = {
+    padding: 5
   }
 
   return (
-    <div class="container">
-      <h1>Welcome to the Warehouse!</h1>
-      <br />
-      <h3>Choose a category of products</h3>
-      <br />
-      <button onClick={() => handleCategory('beanies')}>Beanies</button>
-      <button onClick={() => handleCategory('gloves')}>Gloves</button>
-      <button onClick={() => handleCategory('facemasks')}>Facemasks</button>
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/beanies">
+            <Beanies beanies={beanies} />
+            <div class="container">
+              <Link style={padding} to="/">home</Link>
+            </div>
+          </Route>
+          <Route path="/gloves">
+            <Gloves gloves={gloves} />
+            <div class="container">
+              <Link style={padding} to="/">home</Link>
+            </div>
+          </Route>
+          <Route path="/facemasks">
+            <Facemasks facemasks={facemasks} />
+            <div class="container">
+              <Link style={padding} to="/">home</Link>
+            </div>
+          </Route>
+          <Route path="/">
+            <Home />
+            <div class="container">
+              <Link style={padding} to="/beanies">beanies</Link>
+              <Link style={padding} to="/gloves">gloves</Link>
+              <Link style={padding} to="/facemasks">facemasks</Link>
+            </div>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
