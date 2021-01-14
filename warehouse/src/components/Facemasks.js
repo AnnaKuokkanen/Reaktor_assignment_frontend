@@ -5,7 +5,8 @@ const Facemasks = ({ facemasks }) => {
     <div class="container">
       <h1>Facemasks</h1>
       {facemasks.map(facemask => 
-        <div>
+        <div key={facemask.id}>
+          <p>{facemask.name}</p>
         </div>
       )}
     </div>

@@ -5,7 +5,8 @@ const Beanies = ({ beanies }) => {
     <div class="container">
       <h1>Beanies</h1>
       {beanies.map(beanie => 
-        <div>
+        <div key={beanie.id}>
+          <p>{beanie.name}</p>
         </div>
       )}
     </div>

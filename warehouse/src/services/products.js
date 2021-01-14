@@ -9,6 +9,7 @@ export const getByCategory = async (category) => {
   console.log('Url is ', url);
 
   const response = await axios.get(url);
+  console.log('Response is ', response.data);
   return response.data;
 }
 

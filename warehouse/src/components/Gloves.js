@@ -5,7 +5,8 @@ const Gloves = ({ gloves }) => {
     <div class="container">
       <h1>Gloves</h1>
       {gloves.map(glove => 
-        <div>
+        <div key={glove.id}>
+          <p>{glove.name}</p>
         </div>
       )}
     </div>

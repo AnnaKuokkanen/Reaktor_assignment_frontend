@@ -17,9 +17,12 @@ const App = () => {
   const [facemasks, setFacemasks] = useState([]);
 
   useEffect(() => {
-    setBeanies(getByCategory('beanies'));
-    setGloves(getByCategory('gloves'));
-    setFacemasks(getByCategory('facemasks'));
+    getByCategory('beanies')
+      .then(response => setBeanies(response))
+    getByCategory('gloves')
+      .then(response => setGloves(response))
+    getByCategory('facemasks')
+      .then(response => setFacemasks(response))
   }, []);
 
   const padding = {
