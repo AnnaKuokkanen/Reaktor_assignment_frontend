@@ -2,7 +2,7 @@ import React from 'react';
 
 const Beanies = ({ beanies }) => {
   return (
-    <div class="container">
+    <div>
       <h1>Beanies</h1>
       {beanies.map(beanie => 
         <div key={beanie.id}>

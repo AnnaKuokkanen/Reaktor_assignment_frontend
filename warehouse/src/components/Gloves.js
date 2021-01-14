@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gloves = ({ gloves }) => {
   return (
-    <div class="container">
+    <div>
       <h1>Gloves</h1>
       {gloves.map(glove => 
         <div key={glove.id}>

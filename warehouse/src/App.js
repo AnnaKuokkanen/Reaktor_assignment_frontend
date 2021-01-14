@@ -30,30 +30,30 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       <Router>
         <Switch>
           <Route path="/beanies">
-            <Beanies beanies={beanies} />
-            <div class="container">
+            <div>
               <Link style={padding} to="/">home</Link>
             </div>
+            <Beanies beanies={beanies} />
           </Route>
           <Route path="/gloves">
-            <Gloves gloves={gloves} />
-            <div class="container">
+            <div>
               <Link style={padding} to="/">home</Link>
             </div>
+            <Gloves gloves={gloves} />
           </Route>
           <Route path="/facemasks">
-            <Facemasks facemasks={facemasks} />
-            <div class="container">
+            <div>
               <Link style={padding} to="/">home</Link>
             </div>
+            <Facemasks facemasks={facemasks} />
           </Route>
           <Route path="/">
             <Home />
-            <div class="container">
+            <div>
               <Link style={padding} to="/beanies">beanies</Link>
               <Link style={padding} to="/gloves">gloves</Link>
               <Link style={padding} to="/facemasks">facemasks</Link>

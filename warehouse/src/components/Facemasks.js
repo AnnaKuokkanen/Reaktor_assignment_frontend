@@ -2,7 +2,7 @@ import React from 'react';
 
 const Facemasks = ({ facemasks }) => {
   return (
-    <div class="container">
+    <div>
       <h1>Facemasks</h1>
       {facemasks.map(facemask => 
         <div key={facemask.id}>
