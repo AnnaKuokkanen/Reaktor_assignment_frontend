@@ -4,6 +4,10 @@ const Gloves = ({ gloves }) => {
   return (
     <div class="container">
       <h1>Gloves</h1>
+      {gloves.map(glove => 
+        <div>
+        </div>
+      )}
     </div>
   )
 }

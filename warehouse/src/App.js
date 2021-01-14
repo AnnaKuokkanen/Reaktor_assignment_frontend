@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Beanies from './components/Beanies';
 import Gloves from './components/Gloves';
 import Facemasks from './components/Facemasks';
 import Home from './components/Home';
+import { getByCategory } from './services/products';
 import {
   BrowserRouter as Router,
   Switch, Route, Link
@@ -14,6 +15,12 @@ const App = () => {
   const [beanies, setBeanies] = useState([]);
   const [gloves, setGloves] = useState([]);
   const [facemasks, setFacemasks] = useState([]);
+
+  useEffect(() => {
+    setBeanies(getByCategory('beanies'));
+    setGloves(getByCategory('gloves'));
+    setFacemasks(getByCategory('facemasks'));
+  }, []);
 
   const padding = {
     padding: 5
