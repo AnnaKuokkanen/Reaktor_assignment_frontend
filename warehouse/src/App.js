@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router,
   Switch, Route, Link
 } from "react-router-dom";
+import { Navbar, Nav } from 'react-bootstrap';
 
 
 const App = () => {
@@ -31,24 +32,24 @@ const App = () => {
 
   return (
     <div className="container">
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="/">Your Warehouse</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="beanies">Beanies</Nav.Link>
+          <Nav.Link href="gloves">Gloves</Nav.Link>
+          <Nav.Link href="facemasks">Facemasks</Nav.Link>
+        </Nav>
+      </Navbar>
       <Router>
         <Switch>
           <Route path="/beanies">
-            <div>
-              <Link style={padding} to="/">home</Link>
-            </div>
             <Beanies beanies={beanies} />
           </Route>
           <Route path="/gloves">
-            <div>
-              <Link style={padding} to="/">home</Link>
-            </div>
             <Gloves gloves={gloves} />
           </Route>
           <Route path="/facemasks">
-            <div>
-              <Link style={padding} to="/">home</Link>
-            </div>
             <Facemasks facemasks={facemasks} />
           </Route>
           <Route path="/">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 
 const Gloves = ({ gloves }) => {
   return (
@@ -6,7 +7,11 @@ const Gloves = ({ gloves }) => {
       <h1>Gloves</h1>
       {gloves.map(glove => 
         <div key={glove.id}>
-          <p>{glove.name}</p>
+          <Card style={{ width: '25rem' }}>
+            <Card.Body>
+              <Card.Title>{glove.name}</Card.Title>
+            </Card.Body>
+          </Card>
         </div>
       )}
     </div>
