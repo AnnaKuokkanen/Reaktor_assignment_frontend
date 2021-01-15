@@ -7,11 +7,12 @@ const Gloves = ({ gloves }) => {
       <h1>Gloves</h1>
       {gloves.map(glove => 
         <div key={glove.id}>
-          <Card style={{ width: '25rem' }}>
+          <Card border="info" style={{ width: '25rem' }}>
             <Card.Body>
               <Card.Title>{glove.name}</Card.Title>
             </Card.Body>
           </Card>
+          <br /> 
         </div>
       )}
     </div>

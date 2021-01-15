@@ -7,11 +7,12 @@ const Facemasks = ({ facemasks }) => {
       <h1>Facemasks</h1>
       {facemasks.map(facemask => 
         <div key={facemask.id}>
-          <Card style={{ width: '25rem' }}>
+          <Card border="info" style={{ width: '25rem' }}>
             <Card.Body>
               <Card.Title>{facemask.name}</Card.Title>
             </Card.Body>
           </Card>
+          <br />
         </div>
       )}
     </div>

@@ -7,11 +7,12 @@ const Beanies = ({ beanies }) => {
       <h1>Beanies</h1>
       {beanies.map(beanie => 
         <div key={beanie.id}>
-          <Card style={{ width: '25rem' }}>
+          <Card border="info" style={{ width: '25rem' }}>
             <Card.Body>
               <Card.Title>{beanie.name}</Card.Title>
             </Card.Body>
           </Card>
+          <br />
         </div>
       )}
     </div>

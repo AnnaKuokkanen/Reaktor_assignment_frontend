@@ -26,13 +26,9 @@ const App = () => {
       .then(response => setFacemasks(response))
   }, []);
 
-  const padding = {
-    padding: 5
-  }
-
   return (
     <div className="container">
-      <Navbar bg="dark" variant="dark">
+      <Navbar expand="lg" bg="dark" variant="dark" fixed="top">
         <Navbar.Brand href="/">Your Warehouse</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
@@ -55,9 +51,9 @@ const App = () => {
           <Route path="/">
             <Home />
             <div>
-              <Link style={padding} to="/beanies">beanies</Link>
-              <Link style={padding} to="/gloves">gloves</Link>
-              <Link style={padding} to="/facemasks">facemasks</Link>
+              <Link className="link" to="/beanies">beanies</Link>
+              <Link className="link" to="/gloves">gloves</Link>
+              <Link className="link" to="/facemasks">facemasks</Link>
             </div>
           </Route>
         </Switch>
