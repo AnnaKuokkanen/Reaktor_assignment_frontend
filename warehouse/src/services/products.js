@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const baseUrlProducts = 'http://localhost:3001/api/products/';
-const baseUrlAvailability = 'http://localhost:3001/api/availability/';
+const baseUrlProducts = '/api/products/';
+const baseUrlAvailability = '/api/availability/';
+
 
 export const getByCategory = async (category) => {
   const url = baseUrlProducts.concat(category);
@@ -9,7 +10,6 @@ export const getByCategory = async (category) => {
   console.log('Url is ', url);
 
   const response = await axios.get(url);
-  console.log('Response is ', response.data);
   return response.data;
 }
 
