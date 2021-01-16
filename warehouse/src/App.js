@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Beanies from './components/Beanies';
-import Gloves from './components/Gloves';
-import Facemasks from './components/Facemasks';
 import Home from './components/Home';
+import ProductList from './components/ProductList'
 import { getByCategory } from './services/products';
 import {
   BrowserRouter as Router,
@@ -40,13 +38,13 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/beanies">
-            <Beanies beanies={beanies} />
+            <ProductList categoryName="Beanies" products={beanies} />
           </Route>
           <Route path="/gloves">
-            <Gloves gloves={gloves} />
+            <ProductList categoryName="Gloves" products={gloves} />
           </Route>
           <Route path="/facemasks">
-            <Facemasks facemasks={facemasks} />
+            <ProductList categoryName="Facemasks" products={facemasks} />
           </Route>
           <Route path="/">
             <Home />
