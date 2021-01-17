@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
   Switch, Route, Link
 } from "react-router-dom";
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 
 
 const App = () => {
@@ -29,10 +29,10 @@ const App = () => {
       <Navbar expand="lg" bg="dark" variant="dark" fixed="top">
         <Navbar.Brand href="/">Your Warehouse</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="beanies">Beanies</Nav.Link>
-          <Nav.Link href="gloves">Gloves</Nav.Link>
-          <Nav.Link href="facemasks">Facemasks</Nav.Link>
+          <Nav.Link href="#">Home</Nav.Link>
+          <Nav.Link href="#beanies">Beanies</Nav.Link>
+          <Nav.Link href="#gloves">Gloves</Nav.Link>
+          <Nav.Link href="#facemasks">Facemasks</Nav.Link>
         </Nav>
       </Navbar>
       <Router>
@@ -49,9 +49,21 @@ const App = () => {
           <Route path="/">
             <Home />
             <div>
-              <Link className="link" to="/beanies">beanies</Link>
-              <Link className="link" to="/gloves">gloves</Link>
-              <Link className="link" to="/facemasks">facemasks</Link>
+              <Link className="link" to="/beanies">
+                <Button variant="info">
+                  <span>Beanies</span>
+                </Button>
+              </Link>
+              <Link className="link" to="/gloves">
+                <Button variant="secondary">
+                  <span>Gloves</span>
+                </Button>
+              </Link>
+              <Link className="link" to="/facemasks">
+                <Button variant="dark">
+                  <span>Facemasks</span>
+                </Button>
+              </Link>    
             </div>
           </Route>
         </Switch>
