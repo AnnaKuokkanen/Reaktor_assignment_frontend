@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import { Navbar, Nav, Button } from 'react-bootstrap';
 
-
 const App = () => {
 
   const [beanies, setBeanies] = useState([]);
