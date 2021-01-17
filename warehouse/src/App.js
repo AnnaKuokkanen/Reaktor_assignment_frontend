@@ -29,10 +29,10 @@ const App = () => {
       <Navbar expand="lg" bg="dark" variant="dark" fixed="top">
         <Navbar.Brand href="/">Your Warehouse</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#">Home</Nav.Link>
-          <Nav.Link href="#beanies">Beanies</Nav.Link>
-          <Nav.Link href="#gloves">Gloves</Nav.Link>
-          <Nav.Link href="#facemasks">Facemasks</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="beanies">Beanies</Nav.Link>
+          <Nav.Link href="gloves">Gloves</Nav.Link>
+          <Nav.Link href="facemasks">Facemasks</Nav.Link>
         </Nav>
       </Navbar>
       <Router>
