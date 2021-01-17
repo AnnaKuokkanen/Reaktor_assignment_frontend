@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import Product from './Product';
+import Order from './Order';
 
 const ProductList = ({ categoryName, products }) => {
   const [product, setProduct] = useState([]);
@@ -22,6 +23,8 @@ const ProductList = ({ categoryName, products }) => {
   return (
     <div>
       <h1>{categoryName}</h1>
+      <Order /> 
+      <br />
       {products.map(product => 
         <div key={product.id}>
           <Card as="a" 
