@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Card } from 'react-bootstrap';
-import Product from './Product';
-import Order from './Order';
+import React, { useState } from 'react'
+import { Card } from 'react-bootstrap'
+import Product from './Product'
+import Order from './Order'
 
 const ProductList = ({ categoryName, products }) => {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState([])
 
   const handleCardClick = (productId) => {
     const product = products.filter(product => product.id === productId)
-    console.log('Product is ', product);
-    setProduct(product.concat(product));
+    console.log('Product is ', product)
+    setProduct(product.concat(product))
   }
 
   if (product.length > 0) {
@@ -30,7 +30,7 @@ const ProductList = ({ categoryName, products }) => {
           <Card as="a" 
             onClick={() => handleCardClick(product.id)} 
             border="info" 
-            style={{ width: '25rem', cursor: "pointer" }}
+            style={{ width: '25rem', cursor: 'pointer' }}
           >
             <Card.Header>Manufacturer: {product.manufacturer}</Card.Header>
             <Card.Body>
@@ -44,4 +44,4 @@ const ProductList = ({ categoryName, products }) => {
   )
 }
 
-export default ProductList;
+export default ProductList

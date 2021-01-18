@@ -1,5 +1,5 @@
-import React from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
+import React from 'react'
+import { Dropdown, DropdownButton } from 'react-bootstrap'
 
 const Order = () => {
   return (
@@ -15,4 +15,4 @@ const Order = () => {
     </div>
   )
 }
-export default Order;
+export default Order

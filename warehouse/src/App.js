@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Home from './components/Home';
-import ProductList from './components/ProductList';
-import Footer from './components/Footer';
-import { getByCategory } from './services/products';
+import React, { useState, useEffect } from 'react'
+import Home from './components/Home'
+import ProductList from './components/ProductList'
+import Footer from './components/Footer'
+import { getByCategory } from './services/products'
 import {
   BrowserRouter as Router,
   Switch, Route, Link
-} from "react-router-dom";
-import { Navbar, Nav, Button } from 'react-bootstrap';
+} from 'react-router-dom'
+import { Navbar, Nav, Button } from 'react-bootstrap'
 
 const App = () => {
 
-  const [beanies, setBeanies] = useState([]);
-  const [gloves, setGloves] = useState([]);
-  const [facemasks, setFacemasks] = useState([]);
+  const [beanies, setBeanies] = useState([])
+  const [gloves, setGloves] = useState([])
+  const [facemasks, setFacemasks] = useState([])
 
   useEffect(() => {
     getByCategory('beanies')
@@ -22,7 +22,7 @@ const App = () => {
       .then(response => setGloves(response))
     getByCategory('facemasks')
       .then(response => setFacemasks(response))
-  }, []);
+  }, [])
 
   return (
     <div className="container">
@@ -70,7 +70,7 @@ const App = () => {
       </Router>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

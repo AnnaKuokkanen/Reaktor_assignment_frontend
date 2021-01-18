@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
+import React from 'react'
+import { Card } from 'react-bootstrap'
 
 const Product = ({ product }) => {
   return (
@@ -30,4 +30,4 @@ const Product = ({ product }) => {
   )
 }
 
-export default Product;
+export default Product
