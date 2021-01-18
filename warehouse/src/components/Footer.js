@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <Navbar bg="light" variant="light" fixed="bottom">
-        <Navbar.Brand>Reakt summer 2021 pre-assignment by Anna Kuokkanen</Navbar.Brand>
+        <Navbar.Brand>Reaktor summer 2021 pre-assignment by Anna Kuokkanen</Navbar.Brand>
         <Nav.Link href="https://github.com/AnnaKuokkanen/Reaktor_assignment_backend">Backend repo</Nav.Link>
         <Nav.Link href="https://github.com/AnnaKuokkanen/Reaktor_assignment_frontend">Frontend repo</Nav.Link>
       </Navbar>

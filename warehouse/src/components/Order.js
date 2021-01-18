@@ -6,7 +6,7 @@ const Order = () => {
     <div>
       <DropdownButton 
         id="dropdown-basic-button" 
-        title="Filter by"
+        title="Order by"
         variant="info"
       >
         <Dropdown.Item>Price</Dropdown.Item>
