@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Home from './components/Home';
-import ProductList from './components/ProductList'
+import ProductList from './components/ProductList';
+import Footer from './components/Footer';
 import { getByCategory } from './services/products';
 import {
   BrowserRouter as Router,
@@ -67,6 +68,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
