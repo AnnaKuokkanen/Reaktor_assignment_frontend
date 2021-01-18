@@ -3,21 +3,33 @@ module.exports = {
     "browser": true,
     "es2021": true
   },
-  "extends": "plugin:react/recommended",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  'extends': 'plugin:react/recommended',
+  'parserOptions': {
+    'ecmaFeatures': {
+      'jsx': true
     },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    'ecmaVersion': 12,
+    'sourceType': 'module'
   },
-  "plugins": [
-    "react"
+  'plugins': [
+    'react'
   ],
-  "rules": {
-    "indent": [
-      "error",
+  'rules': {
+    'indent': [
+      'error',
       2
     ],
+    'linebreak-style': [
+      'error',
+      'unix'
+    ],
+    'quotes': [
+      'error',
+      'single'
+    ],
+    'semi': [
+      'error',
+      'never'
+    ]
   }
-};
+}
