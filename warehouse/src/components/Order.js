@@ -1,7 +1,7 @@
 import React from 'react'
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 
-const Order = () => {
+const Order = ({ products }) => {
   return (
     <div>
       <DropdownButton 
