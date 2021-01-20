@@ -1,9 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 
-
 const Product = ({ product }) => {
-  console.log('In product: ', product)
   return (
     <div>
       <h1>{product.name}</h1>

@@ -3,11 +3,11 @@ import Home from './components/Home'
 import ProductList from './components/ProductList'
 import Product from './components/Product'
 import Footer from './components/Footer'
+import NavBar from './components/NavBar'
 import { getByCategory } from './services/products'
 import {
-  Switch, Route, Link, useRouteMatch
+  Switch, Route, useRouteMatch
 } from 'react-router-dom'
-import { Navbar, Nav } from 'react-bootstrap'
 
 const App = () => {
 
@@ -39,26 +39,9 @@ const App = () => {
     ? facemasks.filter(facemask => facemask.id === String(matchFacemasks.params.id))[0]
     : null
 
-  console.log('Beanies are', beanies)
-  console.log('Gloves are', gloves)
-  console.log('Facemasks are', facemasks)
-
-  console.log('Beanie is', beanie)
-  console.log('Glove is', glove)
-  console.log('Facemask is', facemask)
-
-
   return (
     <div className="container">
-      <Navbar expand="lg" bg="dark" variant="dark" fixed="top">
-        <Navbar.Brand href="/">Your Warehouse</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Link className="link" to="/">Home</Link>
-          <Link className="link" to="/beanies">Beanies</Link>
-          <Link className="link" to="/gloves">Gloves</Link>
-          <Link className="link" to="/facemasks">Facemasks</Link>
-        </Nav>
-      </Navbar>
+      <NavBar />
       <Switch>
         <Route path="/beanies/:id">
           <Product product={beanie} />
