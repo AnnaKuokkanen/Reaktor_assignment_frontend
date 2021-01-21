@@ -9,8 +9,8 @@ const ProductList = ({ categoryName, products }) => {
   const [productList, setProductList] = useState([])
 
   useEffect(() => {
-    setProductList(products)
-  }, [])
+    setProductList([...products])
+  }, [products])
 
   const handleCardClick = (productId) => {
     const p = productList.filter(product => product.id === productId)
