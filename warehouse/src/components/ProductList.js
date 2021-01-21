@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Card, DropdownButton, Dropdown, Spinner } from 'react-bootstrap'
 import Product from './Product'
 import { Link } from 'react-router-dom'
+var _ = require('lodash')
 
 const ProductList = ({ categoryName, products }) => {
   const [product, setProduct] = useState([])
@@ -24,10 +25,9 @@ const ProductList = ({ categoryName, products }) => {
     } else if (eventKey === 'expensive') {
       newProducts.sort((a, b) => {return b.price - a.price})
     } else {
-      newProducts.sort((a, b) => {return a.name - b.name})     
+      newProducts =_.orderBy(newProducts, [product => product.name.toLowerCase()], ['asc'])
     }
     setProductList(newProducts)
-    console.log('Products now', productList)
   }
 
   if (product.length > 0) {
