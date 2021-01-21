@@ -27,7 +27,7 @@ const ProductList = ({ categoryName, products }) => {
       <br />
       {products.map(product => 
         <Link key={product.id} className="link" to={`/${categoryName.toLowerCase()}/${product.id}`}>
-          <div>
+          <div className="cardLink">
             <Card
               onClick={() => handleCardClick(product.id)} 
               border="info" 
