@@ -1,7 +1,14 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Spinner } from 'react-bootstrap'
 
 const Product = ({ product }) => {
+  if (product === undefined) {
+    return (
+      <div className="spinner">
+        <Spinner animation="border" variant="info" />
+      </div>
+    )
+  }
   return (
     <div>
       <h1>{product.name}</h1>
