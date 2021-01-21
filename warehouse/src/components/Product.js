@@ -9,6 +9,7 @@ const Product = ({ product }) => {
       </div>
     )
   }
+  
   return (
     <div>
       <h1>{product.name}</h1>
