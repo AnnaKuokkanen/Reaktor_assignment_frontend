@@ -40,4 +40,5 @@ $ npm start
 ## Documentation
 
 [Known issues](https://github.com/AnnaKuokkanen/Reaktor_assignment_frontend/blob/main/documentation/known_issues.md)
+
 [User manual](https://github.com/AnnaKuokkanen/Reaktor_assignment_frontend/blob/main/documentation/user_manual.md)
