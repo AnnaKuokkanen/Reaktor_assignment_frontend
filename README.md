@@ -36,3 +36,8 @@ $ npm start
 ```
 
 5. Go to [localhost:3001](http://localhost:3001/) on your computer to use the application
+
+## Documentation
+
+[Known issues](https://github.com/AnnaKuokkanen/Reaktor_assignment_frontend/blob/main/documentation/known_issues.md)
+[User manual](https://github.com/AnnaKuokkanen/Reaktor_assignment_frontend/blob/main/documentation/user_manual.md)
