@@ -21,21 +21,18 @@ Locally:
 
 ```
 $ git clone https://github.com/AnnaKuokkanen/Reaktor_assignment_backend
-
 ```
 
 3. Install dependencies with
 
 ```
 $ npm install
-
 ```
 
 4. Run project with 
 
 ```
 $ npm start
-
 ```
 
 5. Go to [localhost:3001](http://localhost:3001/) on your computer to use the application
